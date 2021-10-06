@@ -24,7 +24,19 @@
             <p id="result" class="text-warning">This text will be replaced </p>
          
     </form>
+    <form>
+        <label for="property"> Enter a property </label>
+        <input type="text" id="property" class="form-control" name="property" value="color">
 
+  
+    <label for="value"> Enter a value </label>
+    <input type="text" class="form-control" id="value" name="value">
+
+    <input type="button" class="btn btn-primary btn-md" onclick="updateCar()" value="Update the car">
+
+
+<p id="result2" class="text-danger">This text will be replaced </p>
+</form>
     
 
 <script> 
@@ -44,6 +56,15 @@ function orderCar() {
 
     out.innerHTML = my_car
 }
+function updateCar() {
+            my_car = "";
+            out = document.getElementById("result2")
+            property = document.getElementById("property").value
+            value = document.getElementById("value").value
+            my_car = property + ":" + value;
+            out.innerHTML = my_car
+        }
+
 
 </script>
 
