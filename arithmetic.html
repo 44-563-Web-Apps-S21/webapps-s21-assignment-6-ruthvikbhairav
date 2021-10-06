@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Playing with arithmetic  operations
+        </title>
+    </head>
+<body>
+
+<h1>
+    ruthvik bhairav Computes: 
+</h1>
+<form>
+    <label style="font-size: 20px" for="pwd">Enter a base </label>   <input style="margin-left: 90px" type="text" id="base" name="base" inputmode="numeric" /><br /><br />
+    <label style="font-size: 20px" for="phrase">Enter an exponent</label>  <input style="margin-left: 45px" type="text" id="exponent" name="exponent" inputmode="numeric" /><br /> <br /><br />
+    <input type="button" onclick="power()" value="Compute" />
+  </form>
+  <div style="display: flex">  <p id="result1">This text will be replaced </p> </div>
+  <script>
+    let i = 1;
+    let powervalue = 0;
+    let totalvalue = [];
+    function power() {
+      baseValue = document.getElementById("base").value;exponentValue = document.getElementById("exponent").value;
+      out = document.getElementById("result1")
+      for (i = 1; i <= exponentValue; i++) {
+        powervalue = baseValue ** i
+        totalvalue.push(powervalue)
+      }
+      out.innerHTML = " The Powers of " + baseValue + "  are :" + totalvalue.toString()
+    }
+  </script>
+  
+
+
+
+
+
+</body>
+</html> 
