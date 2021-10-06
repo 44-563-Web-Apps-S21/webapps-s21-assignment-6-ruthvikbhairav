@@ -32,6 +32,30 @@
   </script>
   
 
+ <form>  
+    <input type="radio" id="addition" name="processRadioButton" value="addition" onclick=processRadio(this.value)>  <label for="addition">+</label><br>
+      <input type="radio" id="subtraction" name="processRadioButton" value="subtraction"  onclick=processRadio(this.value)>  <label for="subtraction">-</label><br>
+      <input type="radio" id="multiplication" name="processRadioButton" value="multiplication"  onclick=processRadio(this.value)>  <label for="multiplication">*</label><br>
+      <input type="radio" id="division" name="processRadioButton" value="division" onclick=processRadio(this.value)>  <label for="division">/</label> <br>
+  </form>
+  <div style="display: flex">   <p id="result2">This text will be replaced </p> </div>
+  <script>
+    function processRadio(type) {
+      baseValue = document.getElementById("base").value;  exponentValue = document.getElementById("exponent").value; out = document.getElementById("result2")
+      if (type == "addition") {
+        out.innerHTML = (Number(baseValue) + Number(exponentValue)).toString();
+      }
+      else if (type == "subtraction") {
+        out.innerHTML = (Number(baseValue) - Number(exponentValue)).toString();
+      }
+      else if (type == "multiplication") {
+        out.innerHTML = (Number(baseValue) * Number(exponentValue)).toString();
+      }
+      else {
+        out.innerHTML = (Number(baseValue) / Number(exponentValue)).toString();
+      }
+    }
+  </script>
 
 
 
