@@ -68,6 +68,36 @@ function resolveForm (){
 </form>
 
 <p id="result">Attempts display here </p>
+</body>
+
+
+<div class="container">
+    <img src="ant.jpg" id="ant" alt="happy ant" style="width:200px;height:200px;" onclick="newImage()"> 
+</div>
+
+<button type="button" onclick="newImage()">Go to Next Image</button>
+<script>
+var usingImage = 1;
+ function newImage(){
+  img = document.getElementById("ant")
+  switch (usingImage) {
+      case 1:
+          img.src = "ant.jpg"
+          usingImage = 2
+          break;
+      case 2:
+          img.src = "lion.jpg"
+          usingImage = 3
+          break;
+      case 3:
+          img.src = "yak.jpg"  
+          usingImage = 1
+          break;  
+      default:
+          break;
+  }
+}
+</script>
 
 
 </body>
